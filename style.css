@@ -1,19 +1,4 @@
 header {
-  text-align: center;      /* sentrer logoen */
-  background-color: #f8f8f8;  /* lys bakgrunn */
-  padding: 10px 0;         /* litt luft rundt logoen */
-}
-
-.logo {
-  width: 120px;             /* gjør logoen mindre */
-  height: auto;             /* behold proporsjoner */
-  opacity: 0.95;            /* gjør den litt mykere */
-}
-header {
-  background-color: #ffffff; /* eller samme som hovedbakgrunn */
-  border-bottom: 2px solid #e0e0e0; /* tynn linje under header */
-}
-header {
   position: absolute;     /* ligger øverst på siden */
   top: 10px;              /* litt luft fra toppen */
   left: 10px;             /* litt luft fra venstre kant */
@@ -29,8 +14,6 @@ header {
   opacity: 0.9;           /* mykere overgang mot bakgrunnen */
 }
 
-
-}
 
 :root {
   --accent: #E74C3C;
@@ -244,5 +227,6 @@ label { display: block; margin: 10px 0 5px; font-weight: 500; }
   border-top: 2px solid var(--accent);
 }
 .muted { color: var(--muted); }
+
 
 
