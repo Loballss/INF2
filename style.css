@@ -1,12 +1,15 @@
-header {
-  position: absolute;     /* ligger øverst på siden */
-  top: 10px;              /* litt luft fra toppen */
-  left: 10px;             /* litt luft fra venstre kant */
-  background: none;       /* ingen stor bakgrunnsfarge */
-  border: none;           /* ingen linje under */
-  padding: 0;
-  margin: 0;
+.site-header {
+  text-align: left;          /* logoen til venstre */
+  padding: 10px 20px;        /* litt luft rundt */
+  background-color: transparent; /* ingen farget bakgrunn */
 }
+
+.logo {
+  width: 60px;               /* liten og diskret */
+  height: auto;
+  vertical-align: middle;    /* justerer logoen fint på linje */
+}
+
 
 .logo {
   width: 80px;            /* gjør logoen liten */
@@ -227,6 +230,7 @@ label { display: block; margin: 10px 0 5px; font-weight: 500; }
   border-top: 2px solid var(--accent);
 }
 .muted { color: var(--muted); }
+
 
 
 
