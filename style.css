@@ -1,3 +1,9 @@
+.logo {
+  width: 150px;      
+  display: block;
+  margin: 20px auto; 
+}
+
 :root {
   --accent: #E74C3C;
   --accent-light: #FFE4E1;
@@ -210,3 +216,4 @@ label { display: block; margin: 10px 0 5px; font-weight: 500; }
   border-top: 2px solid var(--accent);
 }
 .muted { color: var(--muted); }
+
