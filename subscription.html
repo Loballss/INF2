@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abonnement — Spisetid</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">🍅 Spisetid</a>
+      <nav>
+        <a href="index.html">Hjem</a>
+        <a href="about.html">Om oss</a>
+        <a href="meals.html">Måltider</a>
+        <a href="subscription.html" class="active">Abonnement</a>
+        <a href="checkout.html">Kasse</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="subscriptions">
+      <h1>Abonnement</h1>
+      <p class="muted">Velg mellom startpakke, månedsabonnement eller halvårsabonnement.</p>
+
+      <div class="sub-grid">
+        <div class="sub-card">
+          <h2>🌱 Startsett</h2>
+          <p>Test ut Spisetid og få dine første måltider levert rett hjem.</p>
+          <h3 class="price">100 kr</h3>
+          <p>Engangsbetaling</p>
+          <button class="btn sub-btn" onclick="fakePurchase('Startsett')">Kjøp nå</button>
+        </div>
+
+        <div class="sub-card">
+          <h2>📅 Månedlig</h2>
+          <p>Få ferske og sunne måltider levert hver uke.</p>
+          <h3 class="price">699 kr / mnd</h3>
+          <p><em>Studentpris:</em> 500 kr / mnd</p>
+          <button class="btn sub-btn" onclick="fakePurchase('Månedlig abonnement')">Abonner</button>
+        </div>
+
+        <div class="sub-card">
+          <h2>🕒 6-måneders</h2>
+          <p>Spar penger og få et halvt år med smakfulle måltider.</p>
+          <h3 class="price">4000 kr / 6 mnd</h3>
+          <p><em>Studentpris:</em> 3500 kr / 6 mnd</p>
+          <button class="btn sub-btn" onclick="fakePurchase('6-måneders abonnement')">Abonner</button>
+        </div>
+      </div>
+
+      <div id="sub-result"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Spisetid — Sunn, enkel og bærekraftig mat.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

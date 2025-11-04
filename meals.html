@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Måltider — Spisetid</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">🍅 Spisetid</a>
+      <nav>
+        <a href="index.html">Hjem</a>
+        <a href="about.html">Om oss</a>
+        <a href="meals.html" class="active">Måltider</a>
+        <a href="subscription.html">Abonnement</a>
+        <a href="checkout.html">Kasse</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="meal-category" id="ready-meals">
+      <h2>Ferdiglaget mat</h2>
+      <div id="ready-meals-grid" class="meal-grid"></div>
+    </section>
+
+    <section class="meal-category" id="kits">
+      <h2>Matvarepakker</h2>
+      <div id="kits-grid" class="meal-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer"><p>&copy; 2025 Spisetid.</p></footer>
+  <script src="script.js"></script>
+  <script>
+    const readyMeals = [
+      { id: 'r1', title: 'Kylling & grønnsaker', img: 'images/mat1.jpg', desc: 'Ferdig, sunt og proteinrikt', price: 89 },
+      { id: 'r2', title: 'Laks & quinoa', img: 'images/mat2.jpg', desc: 'Omega-3 og grønne grønnsaker', price: 99 },
+      { id: 'r3', title: 'Vegetar curry', img: 'images/mat3.jpg', desc: 'Kremet, krydret og plantebasert', price: 79 },
+      { id: 'r4', title: 'Fullkornspasta', img: 'images/mat4.jpg', desc: 'Rik på fiber og smak', price: 85 },
+      { id: 'r5', title: 'Havregrøt', img: 'images/mat5.jpg', desc: 'Perfekt til frokost eller kveldsmat', price: 49 }
+    ];
+
+    const kits = [
+      { id: 'k1', title: 'Taco-kit', img: 'images/mat6.jpg', desc: 'Alt du trenger på 15 min', price: 99 },
+      { id: 'k2', title: 'Kyllingwok', img: 'images/mat7.jpg', desc: 'Rask og smakfull middag', price: 95 },
+      { id: 'k3', title: 'Linsesuppe-kit', img: 'images/mat8.jpg', desc: 'Hjemmelaget suppe på 20 min', price: 89 },
+      { id: 'k4', title: 'Vegansk pasta', img: 'images/mat9.jpg', desc: 'Kremet saus og friske grønnsaker', price: 89 },
+      { id: 'k5', title: 'Fiskekaker', img: 'images/mat10.jpg', desc: 'Tradisjonelt med frisk vri', price: 105 }
+    ];
+
+    function renderMeals(list, id) {
+      const container = document.getElementById(id);
+      container.innerHTML = '';
+      list.forEach(m => {
+        container.innerHTML += `
+          <div class="meal-card">
+            <img src="${m.img}" alt="${m.title}">
+            <div class="meal-info">
+              <h3>${m.title}</h3>
+              <p>${m.desc}</p>
+              <span class="price">kr ${m.price}</span>
+              <button class="btn small" onclick='addToCart(${JSON.stringify(m)})'>Legg i kurv</button>
+            </div>
+          </div>`;
+      });
+    }
+
+    renderMeals(readyMeals, 'ready-meals-grid');
+    renderMeals(kits, 'kits-grid');
+  </script>
+</body>
+</html>
