@@ -13,6 +13,22 @@ header {
   background-color: #ffffff; /* eller samme som hovedbakgrunn */
   border-bottom: 2px solid #e0e0e0; /* tynn linje under header */
 }
+header {
+  position: absolute;     /* ligger øverst på siden */
+  top: 10px;              /* litt luft fra toppen */
+  left: 10px;             /* litt luft fra venstre kant */
+  background: none;       /* ingen stor bakgrunnsfarge */
+  border: none;           /* ingen linje under */
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  width: 80px;            /* gjør logoen liten */
+  height: auto;
+  opacity: 0.9;           /* mykere overgang mot bakgrunnen */
+}
+
 
 }
 
