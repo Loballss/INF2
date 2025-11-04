@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kasse — Spisetid</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">🍅 Spisetid</a>
+      <nav>
+        <a href="index.html">Hjem</a>
+        <a href="about.html">Om oss</a>
+        <a href="meals.html">Måltider</a>
+        <a href="subscription.html">Abonnement</a>
+        <a href="checkout.html" class="active">Kasse</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="checkout">
+      <h1>Kasse</h1>
+      <div id="cart-contents"></div>
+
+      <form id="payment-form">
+        <label>Navn</label>
+        <input id="name" required />
+
+        <label>Kortnummer</label>
+        <input id="card" placeholder="4242 4242 4242 4242" required />
+
+        <label>Beløp</label>
+        <input id="amount" readonly />
+
+        <label>Allergier eller merknader</label>
+        <textarea id="comment" placeholder="F.eks. uten nøtter, melk eller gluten..."></textarea>
+        <button type="button" class="btn secondary" id="comment-btn">Send kommentar</button>
+        <p id="comment-result"></p>
+
+        <div class="health-section">
+          <h3>Tilpasset meny for helsebehov</h3>
+          <p class="muted">Har du helsemessige behov som krever spesialkost?</p>
+
+          <label for="health-select">Velg helsetype:</label>
+          <select id="health-select">
+            <option value="">Velg et alternativ</option>
+            <option>Diabetesvennlig</option>
+            <option>Lavt saltinnhold</option>
+            <option>Høy protein</option>
+            <option>Vegetar / Vegansk</option>
+            <option>Allergitilpasset</option>
+            <option>Annet</option>
+          </select>
+
+          <label for="health-notes">Detaljer eller ønsker</label>
+          <textarea id="health-notes" placeholder="Skriv her om du trenger noe spesielt..."></textarea>
+
+          <button type="button" class="btn secondary" id="health-btn">Send helseinfo</button>
+          <p id="health-result"></p>
+        </div>
+
+        <button class="btn" type="submit">Betal med TestCoins</button>
+      </form>
+
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <footer class="footer"><p>&copy; 2025 Spisetid.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
