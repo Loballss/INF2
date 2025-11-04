@@ -1,7 +1,19 @@
+header {
+  text-align: center;      /* sentrer logoen */
+  background-color: #f8f8f8;  /* lys bakgrunn */
+  padding: 10px 0;         /* litt luft rundt logoen */
+}
+
 .logo {
-  width: 150px;      
-  display: block;
-  margin: 20px auto; 
+  width: 120px;             /* gjør logoen mindre */
+  height: auto;             /* behold proporsjoner */
+  opacity: 0.95;            /* gjør den litt mykere */
+}
+header {
+  background-color: #ffffff; /* eller samme som hovedbakgrunn */
+  border-bottom: 2px solid #e0e0e0; /* tynn linje under header */
+}
+
 }
 
 :root {
@@ -216,4 +228,5 @@ label { display: block; margin: 10px 0 5px; font-weight: 500; }
   border-top: 2px solid var(--accent);
 }
 .muted { color: var(--muted); }
+
 
